@@ -10,3 +10,5 @@ result_df = (
     .agg(count("post_id").alias("number_of_posts"))
     .orderBy("day_of_month")
 )
+# Show the result
+result_df.show()
