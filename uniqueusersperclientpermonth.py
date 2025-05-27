@@ -6,8 +6,6 @@ spark = SparkSession.builder.appName("Unique Users Per Client").getOrCreate()
 monthdata = fact_events.withColumn("month",month(fact_events["time_id"]))
 
 data = monthdata.groupBy("client_id", "month").agg(countDistinct("user_id").alias("unique_users"))
-
-
 data.show()
 
 

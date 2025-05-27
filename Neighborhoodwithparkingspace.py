@@ -10,5 +10,4 @@ neighbourhoods_with_parking = (
     .select("neighbourhood")
     .distinct() 
 )
-
 neighbourhoods_with_parking.show(truncate=False)

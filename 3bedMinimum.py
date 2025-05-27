@@ -15,3 +15,9 @@ neighbourhood_beds = (
 )
 
 neighbourhood_beds.select("neighbourhood", "avg_beds").show(truncate=False)
+
+
+
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import avg,sum,col 
+spark = SparkSession.builder.appName('').getOr
