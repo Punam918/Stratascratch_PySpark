@@ -16,3 +16,5 @@ latest_subs = refinance_df.withColumn("row_num", row_number().over(window_spec))
 result_df = latest_subs.groupBy(col("loans.user_id")).agg(_sum("subs.balance").alias("total_balance"))
 
 result_df.show()
+
+
