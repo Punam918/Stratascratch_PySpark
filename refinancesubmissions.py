@@ -17,4 +17,4 @@ result_df = latest_subs.groupBy(col("loans.user_id")).agg(_sum("subs.balance").a
 
 result_df.show()
 
-
+#ok done
